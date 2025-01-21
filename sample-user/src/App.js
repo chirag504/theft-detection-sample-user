@@ -4,7 +4,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { io } from "socket.io-client";
 
 function App() {
-  const SOCKET_URL = "";
+  const SOCKET_URL = "https://theft-detection-web-app-haenaehjepcfdmb3.canadacentral-01.azurewebsites.net/socket";
   const socketRef = useRef(null);
 
   const [connectionString, setConnectionString] = useState("");
