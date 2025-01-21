@@ -15,17 +15,24 @@ function App() {
   const [classes, setClasses] = useState("");
 
   useEffect(() => {
+    console.log("connecting to socket io")
     socketRef.current = io(SOCKET_URL);
+    console.log("connected to socket io")
     // socketRef.current.on("receive_prediction", on_prediction);
-    socketRef.current.on("receive_prediction", on_prediction);
+    // console.log("receive_prediction is on")
+    socketRef.current.on("receive_test", on_prediction);
+    console.log("receive_test is on")
   }, []);
 
   function send_config_to_server(connection_string, video_path) {
-    socketRef.current.emit("send_video", connection_string, video_path);
-    // socketRef.current.emit("send_test", connection_string);
+    // socketRef.current.emit("send_video", connection_string, video_path);
+    // console.log("send_video emit event")
+    socketRef.current.emit("send_test", connection_string, video_path);
+    console.log("send_test emit event")
   }
 
   function on_prediction(data) {
+    console.log("on_prediction called")
     // setClasses(data["classes"]);
     // setClasses(data);
     console.log(data);
