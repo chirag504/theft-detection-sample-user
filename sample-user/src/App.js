@@ -24,7 +24,8 @@ function App() {
 
   function on_prediction(data) {
     // setClasses(data["classes"]);
-    setClasses(data);
+    // setClasses(data);
+    console.log(data)
   }
 
   return (
