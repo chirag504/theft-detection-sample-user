@@ -4,7 +4,8 @@ import React, { useState, useRef, useEffect } from "react";
 import { io } from "socket.io-client";
 
 function App() {
-  const SOCKET_URL = "https://theft-detection-web-app-haenaehjepcfdmb3.canadacentral-01.azurewebsites.net/";
+  const SOCKET_URL =
+    "https://theft-detection-web-app-haenaehjepcfdmb3.canadacentral-01.azurewebsites.net/";
   const socketRef = useRef(null);
 
   const [connectionString, setConnectionString] = useState("");
@@ -25,7 +26,7 @@ function App() {
   function on_prediction(data) {
     // setClasses(data["classes"]);
     // setClasses(data);
-    console.log(data)
+    console.log(data);
   }
 
   return (
