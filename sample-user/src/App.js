@@ -10,8 +10,8 @@ function App() {
     "https://theft-detection-web-app-haenaehjepcfdmb3.canadacentral-01.azurewebsites.net/";
   const socketRef = useRef(null);
 
-  const [connectionString, setConnectionString] = useState("");
-  const [videoPath, setVideoPath] = useState("");
+  const [connectionString, setConnectionString] = useState("azureml://subscriptions/e9e285c5-ec5f-4185-bf4b-a716adf017f9/resourcegroups/DreanIT/workspaces/AML/datastores/test_videos_for_tracking_datastore/paths/");
+  const [videoPath, setVideoPath] = useState("yt1z.net - People Walk In Shopping Mall Stock Video.mov");
   const [classes, setClasses] = useState("");
 
   useEffect(() => {
@@ -47,7 +47,7 @@ function App() {
             <input
               type="text"
               value={connectionString}
-              onChange={(e) => setConnectionString(e.target.value)}
+              // onChange={(e) => setConnectionString(e.target.value)}
             />
           </label>
           <br />
@@ -56,7 +56,7 @@ function App() {
             <input
               type="text"
               value={videoPath}
-              onChange={(e) => setVideoPath(e.target.value)}
+              // onChange={(e) => setVideoPath(e.target.value)}
             />
           </label>
           <br />
